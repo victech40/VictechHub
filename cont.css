@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0b0b0b;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding: 1rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main {
+  background-color: rgb(7, 7, 7);
+  color: white;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.contact-form {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  height: 550px;
+  padding: 20px;
+  background-color: rgb(7, 7, 7);
+  box-shadow: 0 4px 8px rgba(9, 218, 61, 0.705);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-form:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(9, 218, 61, 0.705);
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(9, 218, 61, 0.705);
+  transition: box-shadow 0.3s ease;
+}
+.form {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+  text-align: left;
+  padding-left: 0px;
+  display: flex;
+  /* corrected padding-left value */
+  flex-direction: column; /* added to ensure proper layout */
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 4px 8px rgba(9, 218, 61, 0.705);
+}
+button[type="submit"] {
+  background-color: rgb(9, 218, 61);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(9, 218, 61, 0.705);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button[type="submit"]:hover {
+  background-color: rgb(7, 7, 7);
+  transform: scale(1.05);
+}
+.back-button {
+  background-color: rgb(9, 218, 61);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(9, 218, 61, 0.705);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.back-button:hover {
+  background-color: rgb(7, 7, 7);
+  transform: scale(1.05);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15, 15, 15, 0.85);
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(9, 218, 61, 0.3);
+  padding: 1rem 2rem;
+  max-width: 100%;
+  margin: 1rem auto;
+  backdrop-filter: blur(10px);
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(9, 218, 61, 0.6);
+}
+
+.header-right {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.header-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(9, 218, 61);
+  transition: width 0.3s;
+}
+
+.header-link:hover::after {
+  width: 100%;
+}
+
+.form-container {
+  padding: 1rem;
+  text-align: center;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideIn 1s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-container {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .form-container input,
+  .form-container textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.2rem;
+  }
+
+  .header-link {
+    font-size: 0.9rem;
+  }
+
+  .form-container button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}

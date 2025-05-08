@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  background-color: #0b0b0b;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding: 1rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15, 15, 15, 0.85);
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(9, 218, 61, 0.3);
+  padding: 1rem 2rem;
+  max-width: 100%;
+  margin: 1rem auto;
+  backdrop-filter: blur(10px);
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(9, 218, 61, 0.6);
+  font-family: "Roboto", sans-serif;
+}
+
+.header-right {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(9, 218, 61);
+  transition: width 0.3s;
+}
+
+.header-link:hover::after {
+  width: 100%;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #121212;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  height: 500px;
+  gap: 4rem;
+  box-shadow: 0 8px 16px rgba(9, 218, 61, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(9, 218, 61, 0.3);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideIn 1s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.text-content {
+  max-width: 50%;
+}
+
+.text-content h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.text-content button {
+  background-color: rgb(9, 218, 61);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(9, 218, 61, 0.5);
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.text-content button:hover {
+  background-color: #0b0b0b;
+  color: rgb(9, 218, 61);
+  box-shadow: 0 4px 16px rgba(9, 218, 61, 0.6);
+}
+
+.text-content button:active {
+  transform: scale(0.98);
+}
+
+.image-content {
+  text-align: center;
+}
+
+.image-content img {
+  width: 300px;
+  height: 380px;
+  border-radius: 20%;
+  margin-bottom: 0.5rem;
+}
+
+.image-content .Track,
+.image-content .Track1 {
+  background-color: rgb(9, 218, 61);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(9, 218, 61, 0.5);
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.image-content .Track:hover,
+.image-content .Track1:hover {
+  background-color: #0b0b0b;
+  color: rgb(9, 218, 61);
+  box-shadow: 0 4px 16px rgba(9, 218, 61, 0.6);
+}
+.image-content .Track:active,
+.image-content .Track1:active {
+  transform: scale(0.98);
+}
+
+.social-media {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social-media button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.social-media button:hover {
+  background-color: #555;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0b0b0b;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+  }
+
+  .image-content img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .social-media {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .text-content button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .image-content .Track,
+  .image-content .Track1 {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
