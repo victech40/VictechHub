@@ -37,12 +37,13 @@ body {
 }
 
 .header-title {
-  font-size: 1.5rem;
-  font-weight: 900;
+font-size: 1.5rem;
+  font-weight: 800;
   color: #fff;
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(9, 218, 61, 0.6);
-  font-family: "Roboto", sans-serif;
+
+
 }
 
 .header-right {
