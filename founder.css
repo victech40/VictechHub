@@ -236,6 +236,37 @@ body {
 }
 
 @media (max-width: 480px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .text-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
   .text-content h1 {
     font-size: 1.8rem;
   }
@@ -249,9 +280,25 @@ body {
     padding: 0.6rem 1rem;
   }
 
+  .image-content {
+    text-align: center;
+  }
+
+  .image-content img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
   .image-content .Track,
   .image-content .Track1 {
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
+  }
+
+  .social-media {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }

@@ -322,18 +322,31 @@ button:active {
 /* Responsive styles */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem auto;
+    flex-wrap: wrap; 
+    height: 80px;
   }
 
   .header-right {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 7px;
     gap: 0.5rem;
+    justify-content: space-between;
+    
   }
 
   .section1 {
     flex-direction: column;
+    justify-content: center;
+    margin-right: -300px;
     align-items: center;
+    margin-top: -2100px;
+    margin-bottom: -1400px;
   }
 
   .container1 {
@@ -350,20 +363,79 @@ button:active {
   }
 
   .social-media {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -50px;
+    margin-right: -50px;
+    gap: 4px;
   }
 
   .container5 {
     padding: 1rem;
+    margin: 0 auto;
+   margin-top: 1800px;
+   margin-left: -300px;
+   margin-right: 100px;
+   margin-bottom: 20px;
+  }
+
+  .service-image {
+    width: 100%;
+    height: auto;
+
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .section1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  .container1,
+  .container3,
+  .container4,
+  .container5,
+  .container11 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .social-media {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   .service-image {
     width: 100%;
     height: auto;
   }
-}
 
-@media (max-width: 480px) {
   .header-title {
     font-size: 1.2rem;
   }
@@ -378,5 +450,48 @@ button:active {
 
   .cl {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 1170px) {
+  body {
+    max-width: 1170px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  .header {
+    max-width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  .container1,
+  .container3,
+  .container4,
+  .container5,
+  .container11 {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .section1 {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .social-media {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .service-image {
+    max-width: 100%;
+    height: auto;
   }
 }
