@@ -265,6 +265,28 @@ button:active {
   gap: 6rem;
   margin-top: 1rem;
 }
+
+.social-media {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social-media button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.social-media button:hover {
+  background-color: #555;
+}
+
 .footer {
   text-align: center;
   padding: 1rem;
@@ -328,18 +350,29 @@ button:active {
     padding: 1rem;
     margin: 1rem auto;
     flex-wrap: wrap; 
-    height: 80px;
+    height: 70px;
+  }
+  main{
+    flex-direction: column;
+    align-items: center;
+    
   }
 
   .header-right {
     flex-direction: row;
     align-items: center;
-    margin-top: 7px;
+    margin-top: 3px;
     gap: 0.5rem;
     justify-content: space-between;
     
   }
+.header-title {
+    font-size: 1.2rem;
+  }
 
+  .header-link {
+    font-size: 0.9rem;
+  }
   .section1 {
     flex-direction: column;
     justify-content: center;
@@ -355,7 +388,7 @@ button:active {
 
   .container3 ul {
     padding: 0;
-    list-style: none;
+    padding-left: 15px;
   }
 
   .container4 {
@@ -388,6 +421,11 @@ button:active {
 }
 
 @media (max-width: 480px) {
+
+  main{
+
+flex-direction: column;    
+  }
   body {
     margin: 0;
     padding: 0;

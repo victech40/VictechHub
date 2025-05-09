@@ -61,7 +61,7 @@ textarea {
   border: none;
   border-radius: 5px;
   background-color: white;
-  color: white;
+  color: black;
   font-size: 16px;
   box-shadow: 0 4px 8px rgba(9, 218, 61, 0.705);
   transition: box-shadow 0.3s ease;
@@ -192,13 +192,21 @@ button[type="submit"]:hover {
 /* Responsive styles */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-  }
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem auto;
+    flex-wrap: wrap; 
+    height: 80px;
+   }
 
   .header-right {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 7px;
     gap: 0.5rem;
+    justify-content: space-between;
   }
 
   .form-container {
@@ -226,3 +234,33 @@ button[type="submit"]:hover {
     padding: 0.6rem 1rem;
   }
 }
+.header {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem auto;
+    flex-wrap: wrap; 
+    height: 70px;
+  }
+  main{
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .header-right {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3px;
+    gap: 0.5rem;
+    justify-content: space-between;
+    
+  }
+.header-title {
+    font-size: 1.2rem;
+  }
+
+  .header-link {
+    font-size: 0.9rem;
+  }

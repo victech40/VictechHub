@@ -144,6 +144,7 @@ body {
 
 .text-content button:active {
   transform: scale(0.98);
+  
 }
 
 .image-content {
@@ -202,6 +203,7 @@ body {
 
 .social-media button:hover {
   background-color: #555;
+  box-shadow:0 4px 16px rgba(9, 218, 61, 0.6) ;
 }
 
 .footer {
@@ -217,16 +219,28 @@ body {
   .hero {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    height: 650px;
+    
   }
-
+.Track1{
+  margin-top: 30px;
+   margin-left: -30px;
+  margin-right: -250px;
+}
+ .Track{
+margin-left: 140px;
+ }
   .text-content {
     max-width: 100%;
+    margin-bottom: 0px;
   }
 
   .image-content img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 250px;
+    margin-top: -160px;
+    margin-bottom: -10px;
+    margin-left: 150px;
   }
 
   .social-media {
@@ -234,24 +248,56 @@ body {
     align-items: center;
   }
 }
+ .header-title {
+    font-size: 1.2rem;
+  }
 
+  .header-link {
+    font-size: 0.9rem;
+  }
+ .header-right {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 7px;
+    gap: 0.5rem;
+    justify-content: space-between;
+    margin-top: -3px;
+  }
 @media (max-width: 480px) {
   body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
   }
+ .header-title {
+    font-size: 1.2rem;
+  }
 
+  .header-link {
+    font-size: 0.9rem;
+  }
   .header {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
     padding: 1rem;
+    margin: 1rem auto;
+    flex-wrap: wrap; 
+    height: 0px;
+  }
+  main{
+    flex-direction: row-reverse;
+    align-items: center;
+    
   }
 
   .header-right {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    margin-top: 7px;
     gap: 0.5rem;
+    justify-content: space-between;
+    
   }
 
   .hero {
@@ -278,16 +324,24 @@ body {
   .text-content button {
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
+    
+    
   }
-
+.Track1{
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: -200px;
+}
   .image-content {
     text-align: center;
+
   }
 
   .image-content img {
     width: 100%;
     max-width: 300px;
     height: auto;
+    
   }
 
   .image-content .Track,

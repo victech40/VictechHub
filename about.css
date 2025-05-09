@@ -193,13 +193,21 @@ button:active {
 /* Responsive styles */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
+   flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem auto;
+    flex-wrap: wrap; 
+    height: 80px;
   }
 
   .header-right {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 7px;
     gap: 0.5rem;
+    justify-content: space-between;
   }
 
   .content {
